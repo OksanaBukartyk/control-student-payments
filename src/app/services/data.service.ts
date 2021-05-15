@@ -5,7 +5,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 
 @Injectable()
 export class DataService {
-  private readonly API_URL = 'https://my-json-server.typicode.com/OksanaPetriv/AngularProject/issues';
+  private readonly API_URL = 'https://my-json-server.typicode.com/OksanaPetriv/control-student-payments/issues';
 
   dataChange: BehaviorSubject<Issue[]> = new BehaviorSubject<Issue[]>([]);
   // Temporarily stores data from dialogs
@@ -47,43 +47,6 @@ export class DataService {
 
 
 
-/* REAL LIFE CRUD Methods I've used in my projects. ToasterService uses Material Toasts for displaying messages:
-
-    // ADD, POST METHOD
-    addItem(kanbanItem: KanbanItem): void {
-    this.httpClient.post(this.API_URL, kanbanItem).subscribe(data => {
-      this.dialogData = kanbanItem;
-      this.toasterService.showToaster('Successfully added', 3000);
-      },
-      (err: HttpErrorResponse) => {
-      this.toasterService.showToaster('Error occurred. Details: ' + err.name + ' ' + err.message, 8000);
-    });
-   }
-
-    // UPDATE, PUT METHOD
-     updateItem(kanbanItem: KanbanItem): void {
-    this.httpClient.put(this.API_URL + kanbanItem.id, kanbanItem).subscribe(data => {
-        this.dialogData = kanbanItem;
-        this.toasterService.showToaster('Successfully edited', 3000);
-      },
-      (err: HttpErrorResponse) => {
-        this.toasterService.showToaster('Error occurred. Details: ' + err.name + ' ' + err.message, 8000);
-      }
-    );
-  }
-
-  // DELETE METHOD
-  deleteItem(id: number): void {
-    this.httpClient.delete(this.API_URL + id).subscribe(data => {
-      console.log(data['']);
-        this.toasterService.showToaster('Successfully deleted', 3000);
-      },
-      (err: HttpErrorResponse) => {
-        this.toasterService.showToaster('Error occurred. Details: ' + err.name + ' ' + err.message, 8000);
-      }
-    );
-  }
-*/
 
 
 
